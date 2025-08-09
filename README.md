@@ -50,7 +50,7 @@ For Software:
 ![Screenshot1](https://github.com/Deepika-P06/useless_project_temp/blob/main/ss1.png)
 This code creates an interactive floating word game where words drift across a "sky" background (with optional shapes like clouds, birds, or airplanes).
 
-![Screenshot2]()
+![Screenshot2](https://github.com/Deepika-P06/useless_project_temp/blob/main/ss2.png)
 This CSS creates a clean sky background with animated floating clouds and birds. It styles clickable word bubbles that show meanings in a popup, combining smooth animations with a user-friendly, visually appealing design.
 
 
