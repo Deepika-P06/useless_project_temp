@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dictionary of Fake Facts — while(true)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>while(true)</h1>
+    <p class="subtitle">Click a floating word to see its fake antonym meaning</p>
+  </header>
+
+  <!-- Sky area where clouds and birds appear -->
+  <main>
+    <div class="sky" id="sky"></div>
+  </main>
+
+  <!-- Meaning popup -->
+  <div id="meaningBox" class="meaning-box hidden" role="dialog" aria-hidden="true">
+    <div class="meaning-content">
+      <button id="closeBtn" class="close-btn" aria-label="Close">✕</button>
+      <h3 id="wordTitle"></h3>
+      <p id="wordMeaning"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

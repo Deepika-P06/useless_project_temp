@@ -1,0 +1,144 @@
+/* ---------- Basic page ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(#b6e0fe 0%, #eaf6ff 60%, #ffffff 100%);
+  color: #153e75;
+  overflow: hidden; /* keep sky contained */
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 18px 12px;
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(2px);
+  z-index: 40;
+  position: relative;
+}
+header h1 { font-size: 2.1rem; letter-spacing: 1px; margin-bottom: 6px; }
+.subtitle { font-size: 0.95rem; color: #235a93; }
+
+/* Sky container */
+.sky {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 110px);
+  overflow: hidden;
+}
+
+/* Cloud (word bubble) */
+.cloud {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  background: radial-gradient(circle at 35% 30%, #ffffff 0%, #f6fbff 50%, #ffffff 100%);
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(20,40,80,0.12);
+  font-weight: 700;
+  color: #14406b;
+  cursor: pointer;
+  user-select: none;
+  transform: translate3d(0,0,0); /* make transform GPU-accelerated */
+  white-space: nowrap;
+  pointer-events: auto;
+}
+
+/* Cloud subtle puff (small white circles) */
+.cloud::before, .cloud::after {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 50%;
+  filter: blur(6px);
+  opacity: 0.85;
+  z-index: -1;
+}
+.cloud::before { top: -18px; left: 8px; }
+.cloud::after  { top: -8px; right: 6px; }
+
+/* Float animation: moves clouds from left to right */
+@keyframes floatAcross {
+  0%   { transform: translateX(0) translateY(0) rotate(0deg); opacity: 1; }
+  50%  { transform: translateX(40vw) translateY(-10px) rotate(-1.5deg); opacity: 0.95; }
+  100% { transform: translateX(150vw) translateY(0) rotate(0.8deg); opacity: 0.12; }
+}
+
+/* Birds (simple 'v' wing shape using pseudo elements) */
+.bird {
+  position: absolute;
+  width: 32px;
+  height: 18px;
+  transform-origin: center;
+  z-index: 5;
+  pointer-events: none;
+}
+.bird::before, .bird::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 10px;
+  border-top: 3px solid rgba(20,30,40,0.85);
+  border-radius: 10px;
+  top: 4px;
+}
+.bird::before { left: 0; transform: rotate(-30deg); }
+.bird::after  { right: 0; transform: rotate(30deg); }
+
+/* Bird flight */
+@keyframes birdFly {
+  0% { transform: translateX(0) translateY(0) scale(1); opacity: 1; }
+  50% { transform: translateX(45vw) translateY(-18px) scale(1.03); opacity: 0.9; }
+  100% { transform: translateX(120vw) translateY(0) scale(1); opacity: 0.6; }
+}
+
+/* Meaning box (bottom centered) */
+.meaning-box {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%) translateY(12px);
+  z-index: 60;
+  pointer-events: auto;
+  transition: transform 260ms ease, opacity 260ms ease;
+  opacity: 0;
+}
+.meaning-box.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+.meaning-content {
+  background: rgba(255,255,255,0.98);
+  padding: 14px 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(20,40,80,0.14);
+  min-width: 260px;
+  max-width: 84vw;
+  text-align: center;
+}
+.meaning-content h3 { margin-bottom: 6px; color: #0b3a5b; }
+.meaning-content p { margin: 0; color: #235a93; font-weight: 600; }
+
+/* close button */
+.close-btn {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  color: #7b8b9a;
+}
+
+/* small-screen tweaks */
+@media (max-width: 560px) {
+  header h1 { font-size: 1.6rem; }
+  .cloud { padding: 10px 16px; font-size: 0.95rem; }
+  .meaning-content { padding: 12px; }
+}
