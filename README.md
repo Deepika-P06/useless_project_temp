@@ -47,18 +47,14 @@ cd cloud-airplane-animation]
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](<img width="1781" height="939" alt="Screenshot 2025-08-09 022257" src="https://github.com/user-attachments/assets/3acdbb24-f065-40ae-a4c4-93730873344e" />
-]()
-)
+![Screenshot1](https://github.com/Deepika-P06/useless_project_temp/blob/main/ss1.png)
 This code creates an interactive floating word game where words drift across a "sky" background (with optional shapes like clouds, birds, or airplanes).
 
-![Screenshot2](<img width="1352" height="886" alt="Screenshot 2025-08-09 022639" src="https://github.com/user-attachments/assets/63a010ab-78d4-4cf5-9cda-4a463343cba1" />
-)
+![Screenshot2]()
 This CSS creates a clean sky background with animated floating clouds and birds. It styles clickable word bubbles that show meanings in a popup, combining smooth animations with a user-friendly, visually appealing design.
 
 
-![Screenshot3](<img width="1291" height="743" alt="Screenshot 2025-08-09 022935" src="https://github.com/user-attachments/assets/59669894-1d48-4906-a62d-8e43b484c866" />
-)
+![Screenshot3]()
 This script creates animated floating words and birds in the sky. Clicking a word shows a funny fake meaning in a popup, making the page interactive and lively.
 
 
