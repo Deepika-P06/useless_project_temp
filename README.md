@@ -54,7 +54,7 @@ This code creates an interactive floating word game where words drift across a "
 This CSS creates a clean sky background with animated floating clouds and birds. It styles clickable word bubbles that show meanings in a popup, combining smooth animations with a user-friendly, visually appealing design.
 
 
-![Screenshot3]()
+![Screenshot3](https://github.com/Deepika-P06/useless_project_temp/blob/main/ss3.png)
 This script creates animated floating words and birds in the sky. Clicking a word shows a funny fake meaning in a popup, making the page interactive and lively.
 
 
